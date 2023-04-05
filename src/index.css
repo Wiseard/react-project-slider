@@ -1,0 +1,208 @@
+/* ============= GLOBAL CSS =============== */
+/******** VARIABLES /********/
+:root {
+  /* colors */
+  /* grey */
+  --grey-50: #f8fafc;
+  --grey-100: #f1f5f9;
+  --grey-200: #e2e8f0;
+  --grey-300: #cbd5e1;
+  --grey-400: #94a3b8;
+  --grey-500: #64748b;
+  --grey-600: #475569;
+  --grey-700: #334155;
+  --grey-800: #1e293b;
+  --grey-900: #0f172a;
+  /* blue */
+  --blue-50: #91bef6;
+  --blue-100: #72a9ed;
+  --blue-200: #5293e2;
+  --blue-300: #2b7adb;
+  --blue-400: #3e88e2;
+  --blue-500: #2876d5;
+  --blue-600: #1762be;
+  --blue-700: #0a4ea0;
+  --blue-800: #021f42;
+  --blue-900: #033776;
+
+  /* background */
+  --grey-background: rgb(244, 244, 244);
+
+  /* sizes */
+  --full-width: 100vw;
+  --full-height: 100vh;
+
+  /* box shadow */
+  --shadow-50: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  --shadow-100: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  --favorite-shadow-200: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  --shadow-300: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  --shadow-fancy: rgba(240, 46, 170, 0.4) 5px 5px,
+    rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px,
+    rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
+}
+
+/******** SELECTORS /********/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+}
+
+html {
+  font-size: 100%;
+}
+
+main {
+  background-color: rgb(244, 244, 244);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  text-transform: capitalize;
+}
+
+h1 {
+  font-size: 40px;
+  letter-spacing: 3px;
+  font-weight: 500;
+}
+
+h2,
+p {
+  letter-spacing: 1px;
+}
+
+.btn {
+  width: 100px;
+  border-radius: 5px;
+  border: 1px solid;
+  text-transform: capitalize;
+  font-weight: 200;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: 0.1s;
+}
+/* ============= PROJECT CSS =============== */
+
+/* .container {
+  background-color: skyblue;
+  width: 30vw;
+  height: 30vh;
+  display: grid;
+  place-items: center;
+} */
+
+main {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+}
+
+section {
+  /* border: 1px solid red; */
+  width: 100vh;
+  height: 450px; /*VERY IMPORTANT*/
+  margin: 3rem;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  box-shadow: var(--favorite-shadow-200);
+  overflow: hidden;
+}
+
+article {
+  /* border: 1px solid green; */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  transition: 0.4s;
+}
+
+h3,
+h4,
+p {
+  text-align: center;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+h3,
+h4 {
+  margin-bottom: 0.5rem;
+  letter-spacing: 2px;
+}
+
+h3 {
+  color: var(--blue-600);
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+h4 {
+  color: #fff;
+  font-weight: lighter;
+  background-color: var(--blue-200);
+  padding: 0.5rem;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+p {
+  margin-bottom: 0.2rem;
+  margin-top: 1rem;
+  line-height: 25px;
+  color: var(--grey-600);
+  letter-spacing: 2px;
+}
+
+img {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: rgba(46, 133, 240, 0.4) 5px 0 5px 0,
+    rgba(46, 133, 240, 0.3) 10px 0 10px 0, rgba(46, 133, 240, 0.2) 15px 0 15px 0,
+    rgba(46, 133, 240, 0.1) 20px 0 20px 0;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 180px;
+  font-size: 20px;
+  color: var(--grey-500);
+  display: grid;
+  place-items: center;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.prev:hover,
+.next:hover {
+  color: var(--grey-400);
+}
+
+.prev {
+  left: 0;
+  margin-left: 0.6rem;
+}
+
+.next {
+  right: 0;
+  margin-right: 0.6rem;
+}
